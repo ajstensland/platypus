@@ -96,12 +96,11 @@ X  X  X  X  X  X  X  X  #  #  #  #  #  #  #  .  .                       .  .  . 
 At the moment, Platypus is not available on PyPI or for installation with distutils. For now, just copy the platypus.py file into your working directory.
 
 ## Potential Future Features
-- "Sprinkle" values
+- **"Sprinkle" values**
   - Another set of values can be optionally passed into `platypus.generate()` to place individual points on the map after the terrain values are placed.
   - Especially useful for point locations as opposed to regions (e.g. cities, mines, special plants, etc. as opposed to forests, lakes, countries, etc.).
-- Callback detection
+- **Callback detection**
   - Platypus checks to see if passed values are callbacks, and if so, waits until smoothing is done to call them.
   - If a user wanted to generate each tile's properties individually upon construction, this functionality would provide for it.
   - This is useful if values are callbacks to randomly-influenced object constructors.
-- distutils installation
-  
+- **distutils installation**
