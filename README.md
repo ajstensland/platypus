@@ -7,7 +7,7 @@ A simple Python library made to facilitate the easy generation of two-dimensiona
 
 ## Usage
 
-### platypus.generate()
+### `platypus.generate(width, height, smoothness, values)`
 Generates a new terrain.
 
 `platypus.generate()` takes four arguments:
@@ -21,7 +21,7 @@ Generates a new terrain.
    - This should be formatted as so: `{*value*: *likelihood*, *value*: *likelihood*, ...}`
    - The likelihoods to appear are all relative -- they don't have to add up to 1 (or 100, for that matter). One could write a `values` dictionary like so: `{"#": 3, "%": 2}` and it would only mean that "%" is 2/3 as likely to appear as "#".
 
-### platypus.display_terrain()
+### `platypus.display_terrain(terrain)`
 Displays a terrain on the console.
 
 `platypus.display_terrain()` takes one argument:
@@ -115,3 +115,6 @@ At the moment, Platypus is not available on PyPI or for installation with distut
 - **distutils installation**
 - **More smoothing algorithms**
   - At the moment, all of Platypus's generated terrains are very similar. New smoothing algorithms could bring more diversity to Platypus's output.
+
+## License
+This package is protected by the MIT license (license.txt). Basically, if you use my library, include my license with my code in your package. It gives me credit, and it gives you permissive access! (This summary is not legally binding whatsoever. For exact wording of the license, see license.txt.)
