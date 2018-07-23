@@ -104,3 +104,5 @@ At the moment, Platypus is not available on PyPI or for installation with distut
   - If a user wanted to generate each tile's properties individually upon construction, this functionality would provide for it.
   - This is useful if values are callbacks to randomly-influenced object constructors.
 - **distutils installation**
+- **More smoothing algorithms**
+  - At the moment, all of Platypus's generated terrains are very similar. New smoothing algorithms could bring Platypus more diversity.
