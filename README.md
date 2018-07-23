@@ -117,4 +117,4 @@ At the moment, Platypus is not available on PyPI or for installation with distut
   - At the moment, all of Platypus's generated terrains are very similar. New smoothing algorithms could bring more diversity to Platypus's output.
 
 ## License
-This package is protected by the MIT license (license.txt). Basically, if you use my library, include my license with my code in your package. It gives me credit, and it gives you permissive access! (This summary is not legally binding whatsoever. For exact wording of the license, see licenst.txt.)
+This package is protected by the MIT license (license.txt). Basically, if you use my library, include my license with my code in your package. It gives me credit, and it gives you permissive access! (This summary is not legally binding whatsoever. For exact wording of the license, see license.txt.)
