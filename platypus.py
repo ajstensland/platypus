@@ -53,20 +53,20 @@ def generate(width, height, smoothness, values):
         raise ValueError("Platypus terrains must be at least 3x3 (Attempted: " + str(width) + "x" + str(height) + ").")
 
     # Create a blank slate to fill with terrain values
-    terrain = create_blank(width, height)
+    terrain = _create_blank(width, height)
 
     # Fill the terrain with noise
-    create_noise(terrain, values)
+    _create_noise(terrain, values)
 
     # Iterate over the noise repeatedly to smooth it ('smoothness' times)
     for i in range(smoothness):
-        smooth_random(terrain, values)
+        _smooth(terrain, values)
 
     # Return the terrain
     return terrain
 
 
-def create_blank(width, height):
+def _create_blank(width, height):
     """Returns a 2D list filled with None elements.
 
     Creates and returns a list of lists of the given dimensions
@@ -83,7 +83,7 @@ def create_blank(width, height):
     return empty_terrain
 
 
-def create_noise(terrain, values):
+def _create_noise(terrain, values):
     """Fills the given terrain with noise made with the given values.
 
     Args:
@@ -95,10 +95,10 @@ def create_noise(terrain, values):
         # For every column...
         for j in range(len(terrain[i])):
             # Fill this tile with a chosen value
-            terrain[i][j] = choose_value(values)
+            terrain[i][j] = _choose_value(values)
 
 
-def choose_value(values):
+def _choose_value(values):
     """Chooses a value from the given values.
 
     This takes into account the respective probabilities
@@ -133,7 +133,7 @@ def choose_value(values):
             return value
 
 
-def smooth_random(terrain, values):
+def _smooth(terrain, values):
     """Smooths the terrain.
 
     Iterates over the terrain by choosing random indices
@@ -148,7 +148,7 @@ def smooth_random(terrain, values):
         A more smoothly-bordered terrain (less noisy).
     """
     # Create list of unchecked indices
-    indices = generate_indices_list(terrain)
+    indices = _generate_indices_list(terrain)
 
     # For every index in the list...
     for i in indices:
@@ -156,16 +156,16 @@ def smooth_random(terrain, values):
         row, column = i
 
         # Collect neighbor values
-        neighbors = get_neighbors(terrain, i)
+        neighbors = _get_neighbors(terrain, i)
 
         # Set this terrain value based on the neighbors
-        terrain[row][column] = determine_value(neighbors, values)
+        terrain[row][column] = _determine_value(neighbors, values)
 
     # Return the smoothed terrain
     return terrain
 
 
-def generate_indices_list(terrain):
+def _generate_indices_list(terrain):
     """Returns a unordered list of valid coordinates for given terrain.
 
     Args:
@@ -187,7 +187,7 @@ def generate_indices_list(terrain):
     return indices
 
 
-def get_neighbors(terrain, pos):
+def _get_neighbors(terrain, pos):
     """Returns a list of a given element's neighbor values.
 
     Args:
@@ -272,7 +272,7 @@ def get_neighbors(terrain, pos):
     return neighbors
 
 
-def determine_value(neighbors, values):
+def _determine_value(neighbors, values):
     """Returns the value to set an element to based on its neighbors.
 
     Args:
