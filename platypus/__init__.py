@@ -24,7 +24,7 @@ def generate(width, height, smoothness, values):
         A two-dimensional list with the values spread in a
         terrain-like fashion. For example, running this code:
 
-        > terrain = platypus-terrain.generate(10, 10, 1, {"X": 0.2442,
+        > terrain = platypus.generate(10, 10, 1, {"X": 0.2442,
         >                                         "#": 0.2558,
         >                                         ".": 0.2442,
         >                                         " ": 0.2558})
