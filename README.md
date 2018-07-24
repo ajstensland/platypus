@@ -10,7 +10,7 @@ A simple Python library made to facilitate the easy generation of two-dimensiona
 ### `platypus.generate(width, height, smoothness, values)`
 Generates a new terrain.
 
-`platypus.generate()` takes four arguments:
+Arguments:
 1. `width`: The width of the terrain to generate.
 2. `height`: The height of the terrain to generate.
 3. `smoothness`: The number of times to iterate over and smooth the terrain.
@@ -24,7 +24,7 @@ Generates a new terrain.
 ### `platypus.display_terrain(terrain)`
 Displays a terrain on the console.
 
-`platypus.display_terrain()` takes one argument:
+Argument:
 1. `terrain`: The terrain to display.
    - Only Platypus-generated terrains are guaranteed to display properly.
 
